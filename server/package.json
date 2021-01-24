@@ -19,15 +19,26 @@
     "clean": "rm -rf build && mkdir build",
     "build": "yarn clean && babel api --out-dir build",
     "start": "node build/app.js",
-    "dev": "nodemon --exec babel-node api/app.js"
+    "dev": "nodemon --exec babel-node api/app.js",
+    "format": "prettier --write --config ./.prettierrc  './**/*.{js,jsx,ts,tsx}'",
+    "pre-commit": "yarn format"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn pre-commit",
+      "pre-push": "yarn pre-push"
+    }
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "pg": "^8.5.1",
-    "sequelize": "^6.4.0"
+    "sequelize": "^6.4.0",
+    "husky": "^4.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
@@ -37,6 +48,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.18.0",
     "eslint-plugin-import": "^2.22.1",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
   }
 }
