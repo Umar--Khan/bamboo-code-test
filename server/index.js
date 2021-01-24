@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-const pool = require("./db")
+const pool = require("./config/db")
 
 const PORT = 5000
 
@@ -13,7 +13,7 @@ app.use(express.json())
 app.post('/users', async (req, res) => {
     try {
         const { name, password } = req.body
-        const newUser = await pool.query("INSERT INTO user_info (name, password, balance) VALUES($1, $2, $3) RETURNING *", [name, password, 100])
+        const newUser = await pool.query("INSERT INTO users (name, password, balance) VALUES($1, $2, $3) RETURNING *", [name, password, 100])
 
         res.json(newUser.rows[0])
     } catch (e) {
@@ -23,7 +23,7 @@ app.post('/users', async (req, res) => {
 
 app.get('/users', async(req, res) => {
     try {
-        const allUsers = await pool.query("SELECT * FROM user_info")
+        const allUsers = await pool.query("SELECT * FROM users")
 
         res.json(allUsers.rows)
     } catch (e) {
@@ -34,7 +34,7 @@ app.get('/users', async(req, res) => {
 app.get("/users/:id", async(req, res) => {
     try {
         const { id } = req.params
-        const user = await pool.query("SELECT * FROM user_info WHERE user_info_id = $1", [id])
+        const user = await pool.query("SELECT * FROM users WHERE id = $1", [id])
 
         res.json(user.rows[0])
     } catch (e) {

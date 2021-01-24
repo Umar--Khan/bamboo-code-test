@@ -4,9 +4,27 @@
   "main": "index.js",
   "author": "umar-khan",
   "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf build && mkdir build",
+    "build": "yarn clean && babel api --out-dir build",
+    "start": "node build/app.js",
+    "dev": "nodemon -- exce babel-node api/app.js"
+  },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "pg": "^8.5.1"
+    "pg": "^8.5.1",
+    "sequelize": "^6.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
   }
 }
