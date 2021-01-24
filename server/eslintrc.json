@@ -9,7 +9,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": ["js"]
+        "extensions": [".js"]
       }
     }
   },
@@ -18,12 +18,9 @@
     "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
-      "modules": true,
-      "jsx": true
+      "modules": true
     }
   },
   "plugins": ["import"],
-  "rules": {
-
-  }
+  "rules": {}
 }
