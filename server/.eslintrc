@@ -5,7 +5,7 @@
     "es6": true,
     "mocha": true
   },
-  "extends": "airbnb-base",
+  "extends": ["eslint:recommended"],
   "settings": {
     "import/resolver": {
       "node": {
@@ -22,5 +22,8 @@
     }
   },
   "plugins": ["import"],
-  "rules": {}
+  "rules": {
+    "no-debugger": 1,
+    "no-unused-vars": 2
+  }
 }
