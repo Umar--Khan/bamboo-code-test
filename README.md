@@ -13,13 +13,10 @@
 
 
     
-___
 App description
 -
 When the app is running. You will need to create a user. To send Bambeuros to other users you will need their account number
 
-
-___
 
 Areas to improve
 -
