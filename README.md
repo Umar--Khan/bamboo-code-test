@@ -15,8 +15,9 @@
     
 App description
 -
-When the app is running. You will need to create a user. To send Bambeuros to other users you will need their account number
-
+Bamboo have decided to open an online bank, Bambank, with its own currency, Bambeuros.
+The new bank will run a promotion giving all new customers 100 free Bambeuros when they
+sign up.
 
 Areas to improve
 -
