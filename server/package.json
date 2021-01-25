@@ -21,7 +21,9 @@
     "start": "node build/app.js",
     "dev": "nodemon --exec babel-node api/app.js",
     "format": "prettier --write --config ./.prettierrc  './**/*.{js,jsx,ts,tsx}'",
-    "pre-commit": "yarn format"
+    "pre-commit": "yarn format",
+    "migrate": "sequelize db:migrate",
+    "startServer": "yarn build && yarn migrate && yarn dev"
   },
   "husky": {
     "hooks": {

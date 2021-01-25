@@ -10,7 +10,7 @@ const options = {
 
 export const jwtToken = {
   createToken({ id, username }) {
-    return jwt.sign({ id, username }, process.env.JWT_SECRET, options);
+    return jwt.sign({ userId: id, username }, process.env.JWT_SECRET, options);
   },
   verifyToken(token) {
     return jwt.verify(token, process.env.JWT_SECRET, options);
@@ -20,3 +20,6 @@ export const jwtToken = {
 export const hashPassword = password => bcrpyt.hashSync(password, 10);
 export const comparePassword = (password, hash) =>
   bcrpyt.compareSync(password, hash);
+
+export const getRndInteger = (min, max) =>
+  Math.floor(Math.random() * (max - min) + max);
