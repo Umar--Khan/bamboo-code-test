@@ -26,7 +26,7 @@ module.exports = {
       },
       foreignAccountNumber: {
         allowNull: false,
-        type: Sequelize.BIGINT,
+        type: Sequelize.STRING,
       },
       status: {
         type: Sequelize.STRING,

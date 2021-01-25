@@ -23,7 +23,7 @@
     "format": "prettier --write --config ./.prettierrc  './**/*.{js,jsx,ts,tsx}'",
     "pre-commit": "yarn format",
     "migrate": "sequelize db:migrate",
-    "startServer": "yarn build && yarn migrate && yarn dev"
+    "start-server": "yarn build && yarn migrate && yarn dev"
   },
   "husky": {
     "hooks": {
@@ -36,10 +36,11 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "husky": "^4.3.0",
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.5.1",
     "sequelize": "^6.4.0",
-    "husky": "^4.3.0"
+    "short-uuid": "^4.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",

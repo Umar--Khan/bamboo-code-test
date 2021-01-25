@@ -1,14 +1,13 @@
 import models from '../models';
-import {
-  comparePassword,
-  hashPassword,
-  jwtToken,
-  getRndInteger,
-} from '../utils';
+import { comparePassword, hashPassword, jwtToken } from '../utils';
+import short from 'short-uuid';
 
+const translator = short();
 const { User, Account } = models;
 
-const auth = {
+const DEFAULT_BALANCE = 100;
+
+const user = {
   async signUp(req, res, next) {
     try {
       const { username, password } = req.body;
@@ -19,13 +18,11 @@ const auth = {
       });
 
       const { id } = user;
-      const accountNumberRand = Date.now() + getRndInteger(0, 999999);
-      console.log('accountNumberRand', accountNumberRand);
 
       const account = await Account.create({
         userId: id,
-        balance: 100,
-        accountNumber: accountNumberRand,
+        balance: DEFAULT_BALANCE,
+        accountNumber: translator.new(),
       });
 
       const { balance, accountNumber } = account;
@@ -69,4 +66,4 @@ const auth = {
   },
 };
 
-export default auth;
+export default user;

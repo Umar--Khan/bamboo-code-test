@@ -23,7 +23,7 @@ module.exports = {
       accountNumber: {
         allowNull: false,
         unique: true,
-        type: Sequelize.BIGINT,
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,

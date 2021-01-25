@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       userId: DataTypes.INTEGER,
       balance: DataTypes.FLOAT,
-      accountNumber: DataTypes.BIGINT,
+      accountNumber: DataTypes.STRING,
     },
     {
       sequelize,

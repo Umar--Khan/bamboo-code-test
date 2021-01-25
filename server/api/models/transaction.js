@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       amount: DataTypes.FLOAT,
       accountId: DataTypes.INTEGER,
-      foreignAccountNumber: DataTypes.BIGINT,
+      foreignAccountNumber: DataTypes.STRING,
       status: DataTypes.STRING,
     },
     {
