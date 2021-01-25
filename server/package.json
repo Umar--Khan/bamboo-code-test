@@ -23,7 +23,8 @@
     "format": "prettier --write --config ./.prettierrc  './**/*.{js,jsx,ts,tsx}'",
     "pre-commit": "yarn format",
     "migrate": "sequelize db:migrate",
-    "startServer": "yarn build && yarn migrate && yarn dev"
+    "startServer": "yarn build && yarn migrate && yarn dev",
+    "pre-push": ""
   },
   "husky": {
     "hooks": {
