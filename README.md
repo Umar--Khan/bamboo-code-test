@@ -22,6 +22,7 @@ sign up.
 Areas to improve
 -
 - Styling
+- Testing...
 - Custom hooks e.g. To manage axios fetch calls 
 - Proper storage and authentication of jwt token on client side
 - Splitting of concerns on server side
