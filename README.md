@@ -1,14 +1,14 @@
 # bamboo-code-test
 
 1. Running the server
-    - First `cd server` and install node_modules with `yarn`
-    - Start postgres on port `5432`
+    - First `cd server` and install packages with `yarn`
+    - Start postgres https://www.postgresql.org/docs/9.2/server-start.html on port `5432`
     - Run command `yarn start-server` this should start a server on port `5000`
     - If postgres has db errors, you may need to create a database with the name `bambank-test`
 
 
 2. Running the client
-    - From root `cd client` and install node_modules with `yarn`
+    - From root `cd client` and install packages with `yarn`
     - Run command `yarn start`
     - This should start the client on port `3000`
 
