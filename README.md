@@ -2,6 +2,7 @@
 
 1. Running the server
     - First `cd server` and install node_modules with `yarn`
+    - Start postgres on port `5432`
     - Run command `yarn start-server` this should start a server on port `5000`
     - If postgres has db errors, you may need to create a database with the name `bambank-test`
 
